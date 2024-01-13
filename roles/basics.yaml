@@ -6,3 +6,4 @@
   remote_user: ubuntu
   roles:
     - server_update
+    - vault
