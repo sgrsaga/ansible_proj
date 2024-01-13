@@ -8,7 +8,7 @@
 - name: Create a folder for new apache logs 
   file:
     path: '/var/logs/myapache2'
-    state: directory 
+    state: absent 
     mode: '0755'
 
 - name: Create new apache config file 
@@ -19,7 +19,7 @@
     group: root 
     mode: '0644'
   vars:
-    APACHE_LOG_DIR: '/var/logs/myapache2'
+    warn : 'info'
 
 - name: Start Apache
   service:
