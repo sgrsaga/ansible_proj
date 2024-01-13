@@ -3,6 +3,6 @@
 - name: Install and configure Apache servers 
   hosts: APACHE 
   become: yes
-  remote_user: root
+  remote_user: ubuntu
   roles: 
     - apache 
