@@ -1,20 +1,15 @@
+# code: language=yaml
 ---
--
-  name: This playboom install apache
-  hosts: APACHE 
-  become: no
-  remote_user: ubuntu
-  tasks:
-    - name: Install apache
-      apt:
-        name: httpd
-        state: latest
-    - name: Start Apache
-      service:
-        name: httpd
-        state: started
-        enabled: yes
-    - name: DEploy the web Page to apache
-      copy:
-        src: ../vars/index.html
-        dest: /var/www/html
+- name: Install apache
+  apt:
+    name: httpd
+    state: latest
+- name: Start Apache
+  service:
+    name: httpd
+    state: started
+    enabled: yes
+- name: DEploy the web Page to apache
+  copy:
+    src: ../vars/index.html
+    dest: /var/www/html
