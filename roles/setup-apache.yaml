@@ -1,0 +1,8 @@
+---
+- name: Install and configure Apache servers 
+  hosts: APACHE 
+  become: no
+  remote_user: ubuntu
+  roles: 
+    - apache 
+    

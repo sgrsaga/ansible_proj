@@ -15,5 +15,5 @@
         enabled: yes
     - name: DEploy the web Page
       copy:
-        src: index.html
+        src:  ../vars/index.html
         dest: /var/www/html
