@@ -4,7 +4,15 @@
   apt:
     name: apache2
     state: present
-- name: Use the template file for Apache LOG Location update 
+- name: Create new Log Foler for apache logs 
+
+- name: Create a folder for new apache logs 
+  file:
+    path: '/var/logs/myapache2'
+    state: directory 
+    mode: '0755'
+
+- name: Create new apache config file 
   template: 
     src: ../vars/apache2.j2
     dest: /etc/apache2/apache2.conf
@@ -13,12 +21,14 @@
     mode: '0644'
   vars:
     APACHE_LOG_DIR: '/var/logs/myapache2'
+
 - name: Start Apache
   service:
     name: apache2
     state: started
     enabled: yes
-- name: DEploy the web Page to apache
+
+- name: Deploy the web Page to apache
   copy:
     src: ../vars/index.html
     dest: /var/www/html
