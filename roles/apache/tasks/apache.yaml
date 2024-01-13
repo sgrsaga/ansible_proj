@@ -3,7 +3,7 @@
 - name: Install apache
   apt:
     name: apache2
-    state: presaent
+    state: present
 
 # - name: Create a folder for new apache logs 
 #   file:
