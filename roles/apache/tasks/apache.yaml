@@ -4,7 +4,6 @@
   apt:
     name: apache2
     state: present
-- name: Create new Log Foler for apache logs 
 
 - name: Create a folder for new apache logs 
   file:
