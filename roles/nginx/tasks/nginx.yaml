@@ -1,15 +1,15 @@
 # code: language=yaml
 ---
-    - name: Install Nginx
-      apt:
-        name: nginx
-        state: latest
-    - name: Start Nginx
-      service:
-        name: nginx
-        state: started
-        enabled: yes
-    - name: DEploy the web Page
-      copy:
-        src:  ../vars/index.html
-        dest: /var/www/html
+- name: Install Nginx
+  apt:
+    name: nginx
+    state: latest
+- name: Start Nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+- name: DEploy the web Page
+  copy:
+    src:  ../vars/index.html
+    dest: /var/www/html

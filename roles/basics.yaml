@@ -1,0 +1,8 @@
+# code: language=yaml
+---
+- name: Update the servers 
+  hosts: CLUSTER
+  become: yes 
+  remote_user: ubuntu
+  roles:
+    - server_update

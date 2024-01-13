@@ -1,0 +1,5 @@
+# code: language=yaml
+---
+- name: update ubuntu
+  apt:
+    update_cache: yes 

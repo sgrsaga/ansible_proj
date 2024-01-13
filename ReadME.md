@@ -1,5 +1,5 @@
 
 
 "
-ansible-playbook --inventory inventory/inventory.ini setup-nginx.yaml
+ansible-playbook --inventory inventory/inventory.ini roles/setup-nginx.yaml
 "
