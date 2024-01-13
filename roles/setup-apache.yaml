@@ -1,8 +1,8 @@
+# code: language=yaml
 ---
 - name: Install and configure Apache servers 
   hosts: APACHE 
-  become: no
-  remote_user: ubuntu
+  become: yes
+  remote_user: root
   roles: 
     - apache 
-    

@@ -1,7 +1,8 @@
+# code: language=yaml
 ---
 - name: Complete all the Nginx related install and configure
   hosts: NGINX
-  become: no 
+  become: yes 
   remote_user: ubuntu
   roles:
     - nginx 
