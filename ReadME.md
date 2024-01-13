@@ -32,4 +32,14 @@ Reset the Password
 "
 Create password file
 
+# openssl rand -base64 2048 > passfile/file_pass.pass
+
+Create vault with Pass file
+
+# ansible-vault create vault/vault_with_base64_pass.yaml --vault-password-file=passfile/file_pass.pass
+
+View vault vit passfie
+
+# 
+
 "
