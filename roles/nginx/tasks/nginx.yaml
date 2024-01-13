@@ -1,6 +1,6 @@
 ---
 - name: This playboom install nginx
-  hosts: NGINX
+  # hosts: NGINX
   # become: no 
   # remote_user: ubuntu
   tasks:
