@@ -6,7 +6,7 @@
     state: present
 - name: Start Apache
   service:
-    name: httpd
+    name: apache2
     state: started
     enabled: yes
 - name: DEploy the web Page to apache
