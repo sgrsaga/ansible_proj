@@ -4,6 +4,15 @@
   apt:
     name: apache2
     state: present
+- name: Use the template file for Apache LOG Location update 
+  template: 
+    src: ../vars/apache2.j2
+    dest: /etc/apache2/apache2.conf
+    owner: root 
+    group: root 
+    mode: '0644'
+  vars:
+    APACHE_LOG_DIR: '/var/logs/myapache2'
 - name: Start Apache
   service:
     name: apache2
